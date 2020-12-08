@@ -78,13 +78,12 @@ btnRoll.addEventListener('click', function () {
 btnhold.addEventListener('click', function () {
   if (playing) {
     //Add the currentScore to the active player score
-    //scores[0] = score[0] + currentScore;
     scores[activePlayer] += currentScore;
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
     // check if the score is player score is equal or above 100
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= 100) {
       playing = false;
       diceEl.classList.add('hidden');
 
